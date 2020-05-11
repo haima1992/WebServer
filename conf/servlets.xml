@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<servlets>
+	<servlet url="/myweb/reg" className="com.tedu.webserver.servlet.RegServlet" />
+	<servlet url="/myweb/login" className="com.tedu.webserver.servlet.LoginServlet" />
+	<servlet url="/myweb/update" className="com.tedu.webserver.servlet.UpdateServlet" />
+	<servlet url="/myweb/showAllUser" className="com.tedu.webserver.servlet.ShowAllUserServlet" />
+	<servlet url="/myweb/toEditUser" className="com.tedu.webserver.servlet.ToEditUserServlet" />
+	<servlet url="/myweb/updateUser" className="com.tedu.webserver.servlet.UpdateUserServlet" />
+</servlets>
