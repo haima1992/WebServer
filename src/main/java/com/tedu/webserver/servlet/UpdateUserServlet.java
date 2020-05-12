@@ -7,11 +7,12 @@ import com.tedu.webserver.http.HttpRequest;
 import com.tedu.webserver.http.HttpResponse;
 
 public class UpdateUserServlet extends HttpServlet{
+	@Override
 	public void service(HttpRequest request, HttpResponse response) {
 		String name = request.getparameter("username");
 		String pw = request.getparameter("password");
 		String nn = request.getparameter("nickname");
-		String ageStr = request.getparameter("age");
+		int age = Integer.parseInt(request.getparameter("age"));
 		try (
 			RandomAccessFile raf = new RandomAccessFile("user.dat","rw");
 		){
@@ -21,32 +22,18 @@ public class UpdateUserServlet extends HttpServlet{
 				raf.read(data);
 				String username = new String(data,"utf-8").trim();
 				if(username.equals(name)) {
-					if(pw!=null) {
-						data = pw.getBytes("utf-8");
-						data = Arrays.copyOf(data, 32);
-						raf.write(data);
-					}else {
-						data = new byte[32];
-						raf.write(data);
-					}
-					if(nn!=null) {
-						data = nn.getBytes("utf-8");
-						data = Arrays.copyOf(data, 32);
-						raf.write(data);
-					}else {
-						data = new byte[32];
-						raf.write(data);
-					}
-					if(ageStr!=null) {
-						int age = Integer.parseInt(request.getparameter("age"));
-						raf.writeInt(age);
-					}else {	
-						data = new byte[4];
-						raf.write(data);
-					}
+					data = pw.getBytes("utf-8");
+					data = Arrays.copyOf(data, 32);
+					raf.write(data);
+					data = nn.getBytes("utf-8");
+					data = Arrays.copyOf(data, 32);
+					raf.write(data);
+					raf.writeInt(age);
+					System.out.println("修改完毕！");
 					break;
 				}
 			}
+			System.out.println("开始拼接动态页面！！！");
 			StringBuilder builder = new StringBuilder();
 			builder.append("<html>");
 			builder.append("<head><meta charset='utf-8'><title>修改成功</title></head>");

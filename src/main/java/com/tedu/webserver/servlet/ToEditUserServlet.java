@@ -4,9 +4,18 @@ import java.io.RandomAccessFile;
 
 import com.tedu.webserver.http.HttpRequest;
 import com.tedu.webserver.http.HttpResponse;
+/**
+ * 生成修改指定用户信息页面
+ * @author 杨帆
+ *
+ */
 public class ToEditUserServlet extends HttpServlet{
+	@Override
 	public void service(HttpRequest request, HttpResponse response) {
+		//获取将要修改的用户名
 		String name = request.getparameter("username");
+		System.out.println(name);
+		//找到该用户信息，并生成页面
 		try (
 			RandomAccessFile raf = new RandomAccessFile("user.dat","r");
 		){
@@ -21,6 +30,7 @@ public class ToEditUserServlet extends HttpServlet{
 					raf.read(data);
 					String nickname = new String(data,"utf-8").trim();
 					int age = raf.readInt();
+					System.out.println("开始拼接动态页面！！！");
 					StringBuilder builder = new StringBuilder();
 					builder.append("<html>");
 					builder.append("<head><meta charset='utf-8'><title>用户列表</title></head>");
