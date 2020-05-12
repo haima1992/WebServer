@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f82aa7c7-ed27-4a39-887f-efa037e9fa9a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f82aa7c7-ed27-4a39-887f-efa037e9fa9a" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +42,8 @@
     <option name="showModules" value="false" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/webapps/lib/xml-apis-1.0.b2.jar!/" />
@@ -140,11 +140,24 @@
       <workItem from="1559147648199" duration="1723000" />
       <workItem from="1589173963648" duration="940000" />
       <workItem from="1589206661872" duration="29937000" />
+      <workItem from="1589291739354" duration="306000" />
     </task>
+    <task id="LOCAL-00001" summary="忽略">
+      <created>1589291958085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589291958085</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="忽略" />
+    <option name="LAST_COMMIT_MESSAGE" value="忽略" />
   </component>
   <component name="WindowStateProjectService">
     <state x="554" y="312" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1589250059436">
