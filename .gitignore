@@ -8,3 +8,4 @@
 out
 gen
 /.settings/
+/target/classes/
